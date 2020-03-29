@@ -2,12 +2,12 @@ SETLOCAL
 REM @ECHO OFF
 
 REM Declare variables
-SET DownloadPath="C:\Users\Niko\Desktop"
+SET DownloadPath="C:\Users\Nikolaj Licht\Desktop"
 
 REM TEXTS
 SET CurrentPath=%DownloadPath:"=%\text
 IF exist %CurrentPath% ( echo %CurrentPath% exists ) ELSE ( mkdir %CurrentPath% && echo %CurrentPath% created)
-move %DownloadPath%\*.pdf %CurrentPath%
+move %DownloadPath%\*.pdf %CurrentPath:"=%
 move %DownloadPath%\*.txt %CurrentPath%
 
 REM images

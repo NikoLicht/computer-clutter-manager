@@ -2,7 +2,7 @@ SETLOCAL
 REM @ECHO OFF
 
 REM Declare variables
-SET DownloadPath="C:\Users\Niko\Downloads"
+SET DownloadPath="C:\Users\Nikolaj Licht\Downloads"
 
 REM Remove files older than 7 days
 forfiles /p %DownloadPath% /m *.* /c "cmd /c Del @path" /d -7

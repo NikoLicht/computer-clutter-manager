@@ -1,4 +1,4 @@
-import os
+import os, sys
 from pathlib import Path
 import shutil
 from win10toast import ToastNotifier
@@ -22,7 +22,7 @@ def setup ():
     registerFolder("Texts", 7,'mobi', 'epub', 'pdf', 'word', 'txt')
     registerFolder("Executables", 7, 'exe', 'msi', 'jar')
     registerFolder("Compressed", 7, 'rar', 'zip', '7z')
-    registerFolder("Audio", 7, 'wav', 'mp3')
+    registerFolder("Audio", 7, 'wav', 'mp3', 'ogg', 'aup')
     registerFolder("Video", 7, 'mpeg', 'mov', 'mp4', 'webm', 'avi', 'avchd', 'm4p', 'mkv')
     registerFolder("Builds", 7, 'apk')
     registerFolder("3D", 7, 'blend', 'blend1', 'blend2', 'fbx', 'obj', 'stl', 'ply', 'dae', '3ds', 'stp', 'ma', 'c4d', 'mb')
@@ -157,7 +157,8 @@ def windowsToast():
     notificationText = notificationText[:-2]
     notificationText = notificationText + " --> clean"
     toaster = ToastNotifier()
-    toaster.show_toast("Cleaned up folders for you", notificationText)
+    pathname = os.path.dirname(sys.argv[0])   
+    toaster.show_toast("Cleaned up folders for you", notificationText, duration = 5, icon_path = Path(r'C:\\', 'Users', 'Nikolaj Licht', 'creative', 'computer-clutter-manager', 'icon.ico'))
 
 
 main()

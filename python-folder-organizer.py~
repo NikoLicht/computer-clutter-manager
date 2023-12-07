@@ -28,7 +28,7 @@ def setup ():
     registerFolder("3D", 7, 'blend', 'blend1', 'blend2', 'fbx', 'obj', 'stl', 'ply', 'dae', '3ds', 'stp', 'ma', 'c4d', 'mb')
     registerFolder("Game Dev", 7, 'shader', 'asset', 'unity', 'cs', 'tscn')
     registerFolder("Web", 7, 'php', 'js', 'scss', 'css', 'html')
-    registerFolder("Design", 7, 'ai', 'svg', 'afdesign', 'afphoto', 'afpublisher')
+    registerFolder("Design", 7, 'ai', 'svg', 'afdesign', 'afphoto', 'afpublisher', 'psd')
     registerFolder("Fonts", 7, 'otf', 'ttf')
     registerFolder("Programming", 7, 'py', 'rb')
 
